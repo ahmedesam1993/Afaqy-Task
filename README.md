@@ -41,10 +41,11 @@ An end-to-end test automation framework built with Playwright and TypeScript, ta
 
 
 ## 🧪 Test Scenarios
-- ** Test Case       Description
-- **TC-001          Register a new user, verify account creation, and assert the user is logged in
-- **TC-002          Logout the logged-in user and validate successful logout
-
+```bash
+- Test Case       Description
+- TC-001          Register a new user, verify account creation, and assert the user is logged in
+- TC-002          Logout the logged-in user and validate successful logout
+```
 ## Installation
 
 bash# 1. Clone the repository
