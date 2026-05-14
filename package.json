@@ -1,13 +1,16 @@
 {
-  "name": "orangehrm-playwright",
+  "name": "afaqy-playwright",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
-    "allure:generate": "allure generate reports/allure-results --clean -o reports/allure-report",
-    "allure:open": "allure open reports/allure-report",
-    "allure:serve": "allure serve reports/allure-results"
+
+    "allure:generate": "allure generate ./allure-results -o ./allure-report --clean",
+    "allure:open": "allure open ./allure-report",
+    "allure:serve": "allure serve ./allure-results",
+
+    "test:report": "playwright test && allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
