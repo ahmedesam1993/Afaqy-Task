@@ -1,45 +1,31 @@
 import {type Page } from "@playwright/test";
+import { HomePage } from "./HomePage";
+import { RegisterationInfoPage } from "./RegisterationInfoPage";
 import { LoginPage } from "./LoginPage";
-import { DashboardPage } from "./DashboardPage";
-import { EmployeePage } from "./EmployeePage";
-import { AddEmployeePage } from "./AddEmployeePage";
-import { AdminPage } from "./AdminPage";
-import { AddUserPage } from "./AddUserPage";
 
 export class PageObjectManager{
     private readonly page: Page;
-    private readonly loginPage: LoginPage;
-    private readonly dashboardPage: DashboardPage;
-    private readonly employeePage: EmployeePage;
-    private readonly addEmployeePage: AddEmployeePage;
-    private readonly adminPage: AdminPage;
-    private readonly addUserPage: AddUserPage;
+    private readonly homePage: HomePage;
+    private readonly registerationInfoPage: RegisterationInfoPage;
+    private readonly loginpage: LoginPage;  
 
     constructor(page: Page){
         this.page = page;
-        this.loginPage = new LoginPage(this.page);
-        this.dashboardPage = new DashboardPage(this.page);
-        this.employeePage = new EmployeePage(this.page);
-        this.addEmployeePage = new AddEmployeePage(this.page);
-        this.adminPage = new AdminPage(this.page);
-        this.addUserPage = new AddUserPage(this.page);
+        this.homePage = new HomePage(page);
+        this.registerationInfoPage = new RegisterationInfoPage(page);
+        this.loginpage = new LoginPage(page);
     }
-getLoginPage(){
-    return this.loginPage;
-}
-getDashboardPage(){
-    return this.dashboardPage;
-}
-getAddEmployeePage(){
-    return this.addEmployeePage;
-}
-getAddUserPage(){
-    return this.addUserPage;
-}
-getAdminPage(){
-    return this.adminPage;
-}
-getEmployeePage(){
-    return this.employeePage;
-}
+
+    getHomePage(): HomePage {
+        return this.homePage;
+    }   
+
+    getLoginPage(): LoginPage {
+        return this.loginpage;
+    }
+
+    getRegisterationInfoPage(): RegisterationInfoPage {
+        return this.registerationInfoPage;
+    }
+
 }

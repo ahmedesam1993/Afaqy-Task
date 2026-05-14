@@ -6,8 +6,7 @@ export default defineConfig({
   workers: 1,
   retries: 0,
   reporter: [
-    ['line'],
-    ['html', { outputFolder: 'reports/html-report', open: 'never' }],
+
     ['allure-playwright', {
       detail: true,
       outputFolder: 'allure-results',
@@ -15,7 +14,7 @@ export default defineConfig({
     }],
   ],
   use: {
-    baseURL: 'https://opensource-demo.orangehrmlive.com',
+    baseURL: 'https://automationexercise.com',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     actionTimeout: 30000,

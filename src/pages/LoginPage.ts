@@ -3,33 +3,30 @@ import { Page, Locator, expect } from '@playwright/test';
 export class LoginPage {
   //============Locators============
   readonly page:          Page;
-  readonly usernameInput: Locator;
-  readonly passwordInput: Locator;
-  readonly loginButton:   Locator;
+  readonly nameInput: Locator;
+  readonly userEmailInput: Locator;
+  readonly signupButton:   Locator;
   //============Constructor============
   constructor(page: Page) {
     this.page          = page;
-    this.usernameInput = page.locator('//input[@name="username"]');
-    this.passwordInput = page.locator('//input[@name="password"]');
-    this.loginButton   = page.locator('//button[@type="submit"]');
+    this.nameInput = page.locator('//input[@data-qa="signup-name"]');
+    this.userEmailInput = page.locator('//input[@data-qa="signup-email"]');
+    this.signupButton   = page.locator('//button[@data-qa="signup-button"]');
   }
   //============Methods============
   //============Actions============
-  async goto(): Promise<void> {
-    await this.page.goto('/web/index.php/auth/login');
-    await this.page.waitForLoadState('networkidle');
-  }
 
-  async login(username: string, password: string): Promise<void> {
-    await this.usernameInput.fill(username);
-    await this.passwordInput.fill(password);
-    await this.loginButton.click();
-    await this.page.waitForURL('**/web/index.php/dashboard/index', { timeout: 30000 });
+  async signup(name: string, email: string): Promise<void> {
+    await this.page.waitForURL('**/login', { timeout: 30000 });
+    await this.nameInput.fill(name);
+    await this.userEmailInput.fill(email);
+    await this.signupButton.click();
+    
   }
   //============Assertions============
   async assertPageLoaded(): Promise<void> {
-    await expect(this.usernameInput).toBeVisible();
-    await expect(this.passwordInput).toBeVisible();
-    await expect(this.loginButton).toBeVisible();
+    await expect(this.nameInput).toBeVisible();
+    await expect(this.userEmailInput).toBeVisible();
+    await expect(this.signupButton).toBeVisible();
   }
 }
