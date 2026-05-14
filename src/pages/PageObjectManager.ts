@@ -1,7 +1,6 @@
 import {type Page } from "@playwright/test";
-import { HomePage } from "./HomePage";
-import { RegisterationInfoPage } from "./RegisterationInfoPage";
-import { LoginPage } from "./LoginPage";
+import { HomePage, LoginPage, RegisterationInfoPage } from '../pages';
+
 
 export class PageObjectManager{
     private readonly page: Page;

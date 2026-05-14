@@ -6,7 +6,7 @@ import { buildNewUserData , buildCompleteUserData }
 
 
   test.describe.serial(
-    `Register, Login, and Logout Flow for Automation Practice Website - Using Page Object Model and Data-Driven Testing with TypeScript and Playwright`,
+    `Register, Login, and Logout Flow for Automation Practice Website`,
     () => {
       let context:        BrowserContext;
       let page:           Page;
