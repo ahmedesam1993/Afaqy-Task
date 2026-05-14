@@ -64,7 +64,7 @@ npx playwright install
 ```
 
 
-##▶️ Running Tests
+## ▶️ Running Tests
 Run from terminal inside VS code or from terminal in your device
 ```bash
 Command                         Description
