@@ -65,6 +65,7 @@ npx playwright install
 
 
 ##▶️ Running Tests
+Run from terminal inside VS code or from terminal in your device
 ```bash
 Command                         Description
 npm run test                    Run all tests (headless)
