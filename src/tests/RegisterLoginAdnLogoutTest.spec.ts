@@ -29,11 +29,11 @@ import { buildNewUserData , buildCompleteUserData }
         await pageObjectManager.getHomePage().clickSignupOrLogin();
         await pageObjectManager.getLoginPage().assertPageLoaded();
         await pageObjectManager.getLoginPage().signup(buildNewUserData().name, buildNewUserData().email);
-        await pageObjectManager.getRegisterationInfoPage().assertPageLoaded();
+        await pageObjectManager.getRegistrationInfoPage().assertPageLoaded();
         const userData = buildCompleteUserData();
-        await pageObjectManager.getRegisterationInfoPage().completeSignUp(userData);
-        await pageObjectManager.getRegisterationInfoPage().assertAccountCreated();
-        await pageObjectManager.getRegisterationInfoPage().clickContinueButton();
+        await pageObjectManager.getRegistrationInfoPage().completeSignUp(userData);
+        await pageObjectManager.getRegistrationInfoPage().assertAccountCreated();
+        await pageObjectManager.getRegistrationInfoPage().clickContinueButton();
         await pageObjectManager.getHomePage().assertUserLoggedIn(buildNewUserData().name);
   });
 

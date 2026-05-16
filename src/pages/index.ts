@@ -1,3 +1,3 @@
 export { LoginPage }       from './LoginPage';
 export { HomePage }   from './HomePage';
-export { RegisterationInfoPage }   from './RegistrationInfoPage';
+export { RegistrationInfoPage }   from './RegistrationInfoPage';

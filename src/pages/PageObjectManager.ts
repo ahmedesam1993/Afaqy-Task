@@ -1,17 +1,17 @@
 import {type Page } from "@playwright/test";
-import { HomePage, LoginPage, RegisterationInfoPage } from '../pages';
+import { HomePage, LoginPage, RegistrationInfoPage } from '../pages';
 
 
 export class PageObjectManager{
     private readonly page: Page;
     private readonly homePage: HomePage;
-    private readonly registerationInfoPage: RegisterationInfoPage;
+    private readonly registrationInfoPage: RegistrationInfoPage;
     private readonly loginpage: LoginPage;  
 
     constructor(page: Page){
         this.page = page;
         this.homePage = new HomePage(page);
-        this.registerationInfoPage = new RegisterationInfoPage(page);
+        this.registrationInfoPage = new RegistrationInfoPage(page);
         this.loginpage = new LoginPage(page);
     }
 
@@ -23,8 +23,8 @@ export class PageObjectManager{
         return this.loginpage;
     }
 
-    getRegisterationInfoPage(): RegisterationInfoPage {
-        return this.registerationInfoPage;
+    getRegistrationInfoPage(): RegistrationInfoPage {
+        return this.registrationInfoPage;
     }
 
 }
