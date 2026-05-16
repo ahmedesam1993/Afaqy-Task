@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","7652","TC-001 | Register and validate the registered user logged in","chromium","2026-05-15","passed","2026-05-15","Register, Login, and Logout Flow for Automation Practice Website","RegisterLoginAdnLogoutTest.spec.ts","",""
-"","1219","TC-002 | Logout the logged-in user and validate logout","chromium","2026-05-15","passed","2026-05-15","Register, Login, and Logout Flow for Automation Practice Website","RegisterLoginAdnLogoutTest.spec.ts","",""
