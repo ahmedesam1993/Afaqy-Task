@@ -4,7 +4,7 @@ import { buildNewUserData, completeUserData } from '../data/testData';
   const newUser = buildNewUserData();
 
 
-export class RegisterationInfoPage {
+export class RegistrationInfoPage {
   //============Locators============
   readonly page:          Page;
   readonly titleRadioButtons: Locator;

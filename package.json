@@ -1,7 +1,7 @@
 {
   "name": "afaqy-playwright",
   "version": "1.0.0",
-  "description": "",
+  "description": "Task for Afaqy company on Automation Testing using Playwright",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",

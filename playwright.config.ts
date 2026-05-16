@@ -4,8 +4,9 @@ export default defineConfig({
   testDir: './src/tests',
   fullyParallel: false,
   workers: 1,
-  retries: 0,
+  retries: 1,
   reporter: [
+  ['html', { outputFolder: 'playwright-report', open: 'never' }],
 
     ['allure-playwright', {
       detail: true,
